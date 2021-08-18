@@ -241,6 +241,7 @@ main {
     font-family: Adineue, Helvetica, sans-serif;
     font-size: .8rem;
     cursor: pointer;
+    background-color: white;
 }
 
 #feature .button-container button:hover {
