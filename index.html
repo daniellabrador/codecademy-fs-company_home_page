@@ -3,7 +3,7 @@
     <head>
         <title>Motion | Move With Style</title>
         <link rel="stylesheet" type="text/css" href="./css/normal.css">
-        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
         <meta name="keywords" content="Codecademy, HTML, CSS">
@@ -11,19 +11,20 @@
         <meta name="author" content="Daniel Labrador">
         <!--<meta http-equiv="refresh" content="30">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script/index.js" async></script>
     </head>
     <body>
 
 
         <!--------------  HEADER  ----------------->
         <header>
-            <div class="header-mobile">
-                <div id="header-top">
-                    <a href=""><div class="icons"><img src="./img/search.svg" alt="logo"></div></a>
-                    <a href="#"><div id="logo">
+            <div class="mobile">
+                <div class="header-top">
+                    <a href=""><div class="icons mobile"><img src="./img/search.svg" alt="logo"></div></a>
+                    <a href="#"><div class="mobile-desktop logo">
                         <img src="./img/black-icon.svg" alt="logo"><span>MOT<br>ION</span></div>
                     </a>
-                    <a href=""><div class="icons"><img src="./img/cart.svg" alt="logo"></div></a>
+                        <a href=""><div class="icons mobile-desktop"><img src="./img/cart.svg" alt="logo"></div></a>
                 </div>
                 <nav><ul>
                     <a class="bold" href="#"><li>Men</li></a>
@@ -32,6 +33,25 @@
                     <a class="" href="#"><li>Styles</li></a>
                     <a class="" href="#"><li>Brands</li></a>
                 </ul></nav>
+            </div>
+
+            <div class="desktop">
+                <div class="header-top">
+                    <a href="#"><div class="mobile-desktop logo">
+                        <img src="./img/black-icon.svg" alt="logo"><span>MOT<br>ION</span></div>
+                    </a>
+                    <nav><ul>
+                        <a class="bold" href="#"><li>Men</li></a>
+                        <a class="bold" href="#"><li>Women</li></a>
+                        <a class="bold" href="#"><li>Kids</li></a>
+                        <a class="" href="#"><li>Styles</li></a>
+                        <a class="" href="#"><li>Brands</li></a>
+                    </ul></nav>
+                    <div class='icon-container'>                        
+                        <div class="icons" id="search-bar"><input id="search-input" type="text" placeholder="Search"><img src="./img/search.svg" alt="logo"></div>
+                        <a href=""><div class="icons mobile-desktop"><img src="./img/cart.svg" alt="logo"></div></a>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -43,14 +63,15 @@
         <main>
             <!-- Feature -->
             <section id="feature">
-                <h2>RunMax<span>&trade;</span></h2>
-                <p>Next generation socks that boosts your performance and keeps your feet odor-free while not compromising comfort</p>
-                <div class="button-container"><button>Shop Now</button></div>
+                <div class="max-width">
+                    <h2>RunMax<span>&trade;</span></h2>
+                    <p>Next generation socks that boosts your performance and keeps your feet odor-free while not compromising comfort</p>
+                    <div class="button-container"><button>Shop Now</button></div>
             </section>
 
             <!-- Company -->
             <section id="about">
-                <div id="company">
+                <div id="company" class="max-width">
                     <h1>Motion</h1>
                     <p>Motion Essentials is home for stylistic shoes and socks that promotes confidence and comfort. These days, fashion becomes one of the top considerations of an individual in showing one’s interest, taste and mood. However, not everyone has the confidence to show off their style, to wear what really represents them, and to comfortably express themselves. As a result, Motion supplements one’s confidence and boost anyone’s competence through a pair of trendy iconic shoes and socks. The business offers sets of socks with various designs such as classic paintings, remarkable icons, cartoon characters, heroes, animal prints and food designs among others.</p>
                 </div>
@@ -58,7 +79,7 @@
         
             <!-- Popular -->
             <section id="popular">
-                <div id="popular-feature-box" class="feature-box">
+                <div id="popular-feature-box" class="feature-box max-width">
                     <div class="box">
                         <div>
                             <button>Socks</button>
@@ -76,9 +97,9 @@
                     <h2>Popular Right Now</h2>
                     <div class="popular-buttons">
                         <a href="#"><div>⭐ Starry Night Socks</div></a>
-                        <a href="#"><div>Cartoons</div></a>
-                        <a href="#"><div>Abstract</div></a>
+                        <a href="#"><div>Sneakers</div></a>
                         <a href="#"><div>Sports</div></a>
+                        <a href="#"><div>Abstract</div></a>
                         <a href="#"><div>Animals</div></a>
                         <a href="#"><div>Classical Art</div></a>
                     </div>
@@ -146,8 +167,10 @@
         <footer>
             <!-- Aside -->
             <aside>
-                <p>Register your email for news and special offers</p>
-                <div><button>Sign Up for Newsletter</button></div>
+                <div class="max-width">
+                    <p>Register your email for news and special offers</p>
+                    <div class="black-button-container"><button>Sign Up for Newsletter</button></div>
+                </div>
             </aside>
 
             <!-- Bottom Nav -->
@@ -155,35 +178,35 @@
                 <div>
                     <h3>PRODUCTS</h3>
                     <ul>
-                        <li>For Men</li>
-                        <li>For Women</li>
-                        <li>For Kids</li>
+                        <a href=""><li>For Men</li></a>
+                        <a href=""><li>For Women</li></a>
+                        <a href=""><li>For Kids</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>SPORTS</h3>
                     <ul>
-                        <li>Socks</li>
-                        <li>Shoes</li>
+                        <a href=""><li>Socks</li></a>
+                        <a href=""><li>Shoes</li></a>
                     </ul>
                 </div>
                 <div>
-                    <h3>Styles</h3>
+                    <h3>STYLES</h3>
                     <ul>
-                        <li>Cartoons</li>
-                        <li>Abstract</li>
-                        <li>Sports</li>
-                        <li>Animals</li>
-                        <li>Classical Arts</li>
-                        <li>Plain</li>
+                        <a href=""><li>Cartoons</li></a>
+                        <a href=""><li>Abstract</li></a>
+                        <a href=""><li>Sports</li></a>
+                        <a href=""><li>Animals</li></a>
+                        <a href=""><li>Classical Arts</li></a>
+                        <a href=""><li>Plain</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>COMPANY INFO</h3>
                     <ul>
-                        <li>About Us</li>
-                        <li>Careers</li>
-                        <li>Press</li>
+                        <a href=""><li>About Us</li></a>
+                        <a href=""><li>Careers</li></a>
+                        <a href=""><li>Press</li></a>
                     </ul>
                 </div>
             </nav>
@@ -192,8 +215,11 @@
             <div id="credits">
                 <ul>
                     <li><a href="#">Data Protection</a></li>
+                    <li class="divider"> | </li>
                     <li><a href="#">General Terms & Conditions</a></li>
-                    <li><a href="#">Imprint</a></li>
+                    <li class="divider"> | </li>
+                    <li><a href="https://github.com/daniellabrador/codecademy-motion_home_page#project-prompt">Codecademy Project by Daniel Labrador</a></li>
+                    <li class="divider"> | </li>
                     <li>&copy; <a href="#">2021 Motion Essentials Inc.</a></li>
                 </ul>
             </div>

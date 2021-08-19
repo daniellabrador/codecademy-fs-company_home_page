@@ -29,6 +29,15 @@
     font-style: normal;
 }
 
+/* Code New Roman*/
+@font-face {
+    font-family: 'Code';
+    src:    url('../fonts/CodeNewRoman\ Bold.woff2') format('woff2'),
+            url('../fonts/CodeNewRoman\ Bold.woff') format('woff'),
+            url('../fonts/CodeNewRoman\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 
 
@@ -60,6 +69,13 @@ h2 {
 }
 
 
+
+
+
+
+
+
+
 /*----- Header-----*/
 header {
     position: fixed;
@@ -73,30 +89,31 @@ header a {
     text-decoration: none;
 }
 
-header #header-top {
+header .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
 }
 
-header #header-top .icons {
+header .header-top .icons {
     height: 1.25rem;
     padding: 0 1.25rem;
 }
 
-header #logo {
+header .logo {
     display: flex;
     height: 2.75rem;
     padding: .50rem 0;
     text-align: center;
 }
 
-header #logo span {
+header .logo span {
     margin: auto 0 auto 7px;
     padding-top: 3px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Code,'Courier New', Courier, monospace;
     font-weight: 900;
+    letter-spacing: -0.015rem;
     font-size: 1.1rem;
     line-height: .85rem;
     color: black;
@@ -104,6 +121,10 @@ header #logo span {
 
 header img {
     height: 100%;
+}
+
+header .desktop {
+    display: none;
 }
 
 header nav {
@@ -132,6 +153,96 @@ header nav ul a li {
     color: white;
 }
 
+@media only screen and (min-width: 800px) {
+    header .mobile {
+        display: none;
+    }
+
+    header .desktop {
+        width: 100%;
+        display: flex;
+        padding: 0 1.25rem;
+        background-color: white;
+    }
+
+    header .desktop .header-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    header .desktop .header-top .logo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header .desktop .header-top nav ul a {
+        display: flex;
+        height: 3.75rem;
+        background-color: white;
+    }
+
+    header .desktop .header-top nav ul a:hover {
+        background-color: rgb(240, 240, 240);
+    }
+
+    header .desktop .header-top nav ul a li {
+        margin: auto 0;
+        color: black;
+    }
+
+    header .desktop .header-top .icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 2.5rem;
+    }
+
+    header .desktop .header-top .icon-container .icons {
+        padding: 0;
+    }
+
+    header .desktop .header-top .icon-container #search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 11rem;
+        height: 2rem;
+        background-color: rgb(228, 228, 228);
+    }
+    header .desktop .header-top .icon-container #search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1.25rem;
+        width: 11rem;
+        height: 2rem;
+        background-color: rgb(228, 228, 228);
+    }
+
+    header .desktop .header-top .icon-container #search-bar input {
+        width: 8.25rem;
+        border: 0;
+        background-color: rgb(228, 228, 228);
+    }
+
+    header .desktop .header-top .icon-container #search-bar img{
+        height: 1.25rem;
+        margin-right: 0.5rem;
+    }
+    header .desktop .header-top .icon-container #search-bar input:focus {
+        outline: none;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    header .desktop .header-top .logo {
+        width: 16rem;
+    }
+}
 
 
 
@@ -143,7 +254,12 @@ header nav ul a li {
 /*----- Main -----*/
 main {
     margin-top: 5.875rem;
-    background-color: lightcyan;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        margin: 3.75rem auto 0;
+    }
 }
 
 /* Common Elements */
@@ -185,20 +301,28 @@ main {
     background-color: #DD0426;
 }
 
+.max-width {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
 /* Feature */
 
 #feature {
+    background-image: linear-gradient(#00000000,#00000000, #000000), url('../img/feature-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+#feature .max-width {
     height: 30rem;
     padding: 3rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-    background-image: linear-gradient(#00000000,#00000000, #000000), url('../img/feature-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
 }
 
 #feature h2 {
@@ -257,6 +381,18 @@ main {
     background-color: #DD0426;
 }
 
+
+@media only screen and (min-width: 800px){
+    .feature-box {
+        flex-direction: row;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .box {
+        margin: 0 1rem 2rem !important;
+    }
+}
 
 /* Company */
 #about {
@@ -321,6 +457,12 @@ main {
     padding: 4rem 0 1rem;
 }
 
+@media only screen and (min-width:800px) {
+    #hot {
+        padding: 4rem 0 !important;
+    }    
+}
+
 #hot h2 {
     text-transform: uppercase;
     text-align: center;
@@ -329,6 +471,8 @@ main {
 }
 
 #hot .feature-box .box {
+    margin: 0 10% 10%;
+    width: 80%;
     border-radius: 4%;
     overflow: hidden;
 }
@@ -344,17 +488,26 @@ main {
 
 /* Team */
 #team {
-    padding: 4rem;
+    padding: 4rem 4rem 0;
     background-color: white;
 }
 
+@media only screen and (min-width:800px) {
+    #team {
+        padding: 4rem !important;
+    }    
+}
+
 #team h2 {
+    margin-bottom: 3rem;
     text-transform: uppercase;
     text-align: center;
 }
 
 #team .box {
     margin-top: 1rem;
+    margin: 0 15% 15%;
+    width: 70%;
 }
 
 #team .box .team-member {
@@ -398,7 +551,7 @@ aside p {
     margin: 0;
 }
 
-aside div {
+aside .black-button-container {
     position: relative;
     top: .35rem;
     left: .35rem;
@@ -427,9 +580,41 @@ aside button:hover {
     left: 0rem;
 }
 
+@media only screen and (min-width: 800px) {
+    aside .max-width {
+        padding: 2rem;
+    }
+}
+
 footer nav {
     display: none;
-    background-color: #9197AE;
+}
+
+@media only screen and (min-width: 800px) {
+    footer nav {
+        margin: 2rem auto;
+        max-width: 1000px;
+        display: flex;
+        background-color: #ffffff;
+    }
+
+    footer nav div {
+        margin: 0 2rem;
+    }
+
+    footer nav ul {
+        padding: 0;
+    }
+
+    footer nav ul a {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer nav ul a li {
+        list-style: none;
+        margin-top: 0.5rem;
+    }
 }
 
 #credits {
@@ -455,4 +640,25 @@ footer nav {
     text-decoration: none;
     line-height: 2rem;
     color: white;
+}
+
+#credits ul .divider {
+    display: none;
+    line-height: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+    #credits ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
+
+    #credits ul li {
+        margin: 0 .25rem;
+    }
+
+    #credits ul .divider {
+        display: flex;
+    }
 }
