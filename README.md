@@ -35,4 +35,4 @@ To view the final output, click [here](https://daniellabrador.github.io/codecade
 The techniques utilized was based on the lessons taught in [Codecademy's Full-Stack Engineer Course](https://www.codecademy.com/learn/paths/full-stack-engineer-career-path
 ). The challenges are also provided by Codecademy.
 
-The company was inspired from our former group's business simulation in our school.
+The company was inspired from our former group's business simulation. The business name was called Mozzion.
