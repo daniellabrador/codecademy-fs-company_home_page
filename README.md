@@ -28,9 +28,11 @@ If you want, you can tour our example site for inspiration or to see how we used
 
 ## Setup
 
-To view the final output, click [here](https://daniellabrador.github.io/codecademy-motion_home_page/).
+To view the final output, click [here](https://daniellabrador.github.io/codecademy-fs-company_home_page/).
 
 ## Sources
 
 The techniques utilized was based on the lessons taught in [Codecademy's Full-Stack Engineer Course](https://www.codecademy.com/learn/paths/full-stack-engineer-career-path
 ). The challenges are also provided by Codecademy.
+
+The company was inspired from our former group's business simulation in our school.
